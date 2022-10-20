@@ -1,6 +1,6 @@
 name: Actions workflow
 
-on: [push]
+on: [ push ]
 
 jobs:
   run-github-actions:
@@ -13,11 +13,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v1
       - name: List files after checkout
-        steps:
-          - name: List files
-            run: |
-              pwd
-              ls -a
+        run: |
+          pwd
+          ls -a
       - name: Simple JS Action
         id: greet
         uses: actions/hello-world-javascript-action@v1
